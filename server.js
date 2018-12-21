@@ -25,7 +25,7 @@ MongoClient.connect('mongodb://dave:maradr1980@ds127101.mlab.com:27101/lamarrull
     res.sendFile(__dirname + '/index.html')
   })
 
-  app.get('/', (req, res) => {
+  app.get('/quotes', (req, res) => {
     var cursor = db.collection('quotes').find().toArray(function(err, result){
         console.log(result)
     })
